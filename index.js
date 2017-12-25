@@ -12,7 +12,7 @@ module.exports = function ({ types: t, template }) {
       const importCss = addNamed(
         p.hub.file.path,
         'default',
-        'babel-plugin-dual-import/importCss.js',
+        'babel-plugin-dual-import-with-mode/importCss.js',
         { nameHint: 'importCss' }
       )
 
@@ -49,13 +49,14 @@ module.exports = function ({ types: t, template }) {
     return trimChunkName(chunkName)
   }
 
-  function promiseAll(p) {
+  function promiseAll(p, { mode }) {
     const argPath = getImportArgPath(p)
     const importArgNode = argPath.node
     const chunkName = getMagicCommentChunkName(importArgNode)
 
     delete argPath.node.leadingComments
     argPath.addComment('leading', ` webpackChunkName: '${chunkName}' `)
+    argPath.addComment('leading', ` webpackMode: '${mode}' `)
 
     return loadTemplate({
       IMPORT: argPath.parent,
@@ -65,12 +66,12 @@ module.exports = function ({ types: t, template }) {
   }
 
   return {
-    name: 'dual-import',
+    name: 'dual-import-with-mode',
     visitor: {
-      Import(p) {
+      Import(p, { opts }) {
         if (p[visited]) return
         p[visited] = true
-        p.parentPath.replaceWith(promiseAll(p))
+        p.parentPath.replaceWith(promiseAll(p, opts))
       }
     }
   }

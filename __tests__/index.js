@@ -15,6 +15,7 @@ const babelOptions = {
 
 pluginTester({
   plugin,
+  pluginOptions: { mode: 'eager' },
   babelOptions,
   snapshot: true,
   tests: {
@@ -33,12 +34,13 @@ pluginTester({
 
 // toggle from test.skip to test.only when working on the plugin using Wallaby
 test.skip('wallaby-live-coding', () => {
-  const input = 'import(`../async/${page}`);\n\nimport("../async/Foo.js");\n\nimport(`../async/page`);'
+  const input =
+    'import(`../async/${page}`);\n\nimport("../async/Foo.js");\n\nimport(`../async/page`);'
   // const input = 'import("../async/Foo.js")'
 
   const output = babel.transform(input, {
     filename: 'currentFile.js',
-    plugins: [dynamicSyntax, plugin],
+    plugins: [dynamicSyntax, [plugin, { mode: 'eager' }]],
     presets: [es2015, stage2]
   })
 

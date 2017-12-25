@@ -6,11 +6,11 @@ import(\`../../base/\${page}\`)
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-var _importCss = _interopRequireDefault(require(\\"babel-plugin-dual-import/importCss.js\\")).default;
+var _importCss = _interopRequireDefault(require(\\"babel-plugin-dual-import-with-mode/importCss.js\\")).default;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-Promise.all([import( /* webpackChunkName: 'base/[request]' */\`../../base/\${page}\`), _importCss(\`base/\${page}\`)]).then(proms => proms[0]);
+Promise.all([import( /* webpackChunkName: 'base/[request]' */ /* webpackMode: 'eager' */\`../../base/\${page}\`), _importCss(\`base/\${page}\`)]).then(proms => proms[0]);
 "
 `;
 
@@ -20,11 +20,11 @@ import(\`./\${page}\`)
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-var _importCss = _interopRequireDefault(require(\\"babel-plugin-dual-import/importCss.js\\")).default;
+var _importCss = _interopRequireDefault(require(\\"babel-plugin-dual-import-with-mode/importCss.js\\")).default;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-Promise.all([import( /* webpackChunkName: '[request]' */\`./\${page}\`), _importCss(\`\${page}\`)]).then(proms => proms[0]);
+Promise.all([import( /* webpackChunkName: '[request]' */ /* webpackMode: 'eager' */\`./\${page}\`), _importCss(\`\${page}\`)]).then(proms => proms[0]);
 "
 `;
 
@@ -34,11 +34,11 @@ import(\`./base/\${page}\`)
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-var _importCss = _interopRequireDefault(require(\\"babel-plugin-dual-import/importCss.js\\")).default;
+var _importCss = _interopRequireDefault(require(\\"babel-plugin-dual-import-with-mode/importCss.js\\")).default;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-Promise.all([import( /* webpackChunkName: 'base/[request]' */\`./base/\${page}\`), _importCss(\`base/\${page}\`)]).then(proms => proms[0]);
+Promise.all([import( /* webpackChunkName: 'base/[request]' */ /* webpackMode: 'eager' */\`./base/\${page}\`), _importCss(\`base/\${page}\`)]).then(proms => proms[0]);
 "
 `;
 
@@ -48,11 +48,11 @@ import(\`../../base\`)
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-var _importCss = _interopRequireDefault(require(\\"babel-plugin-dual-import/importCss.js\\")).default;
+var _importCss = _interopRequireDefault(require(\\"babel-plugin-dual-import-with-mode/importCss.js\\")).default;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-Promise.all([import( /* webpackChunkName: 'base' */\`../../base\`), _importCss(\`base\`)]).then(proms => proms[0]);
+Promise.all([import( /* webpackChunkName: 'base' */ /* webpackMode: 'eager' */\`../../base\`), _importCss(\`base\`)]).then(proms => proms[0]);
 "
 `;
 
@@ -62,11 +62,11 @@ import(\`./base\`)
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-var _importCss = _interopRequireDefault(require(\\"babel-plugin-dual-import/importCss.js\\")).default;
+var _importCss = _interopRequireDefault(require(\\"babel-plugin-dual-import-with-mode/importCss.js\\")).default;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-Promise.all([import( /* webpackChunkName: 'base' */\`./base\`), _importCss(\`base\`)]).then(proms => proms[0]);
+Promise.all([import( /* webpackChunkName: 'base' */ /* webpackMode: 'eager' */\`./base\`), _importCss(\`base\`)]).then(proms => proms[0]);
 "
 `;
 
@@ -76,11 +76,11 @@ import(\\"./Foo.js\\")
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-var _importCss = _interopRequireDefault(require(\\"babel-plugin-dual-import/importCss.js\\")).default;
+var _importCss = _interopRequireDefault(require(\\"babel-plugin-dual-import-with-mode/importCss.js\\")).default;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-Promise.all([import( /* webpackChunkName: 'Foo' */\\"./Foo.js\\"), _importCss(\\"Foo\\")]).then(proms => proms[0]);
+Promise.all([import( /* webpackChunkName: 'Foo' */ /* webpackMode: 'eager' */\\"./Foo.js\\"), _importCss(\\"Foo\\")]).then(proms => proms[0]);
 "
 `;
 
@@ -90,11 +90,11 @@ import(\\"../../Foo\\")
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-var _importCss = _interopRequireDefault(require(\\"babel-plugin-dual-import/importCss.js\\")).default;
+var _importCss = _interopRequireDefault(require(\\"babel-plugin-dual-import-with-mode/importCss.js\\")).default;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-Promise.all([import( /* webpackChunkName: 'Foo' */\\"../../Foo\\"), _importCss(\\"Foo\\")]).then(proms => proms[0]);
+Promise.all([import( /* webpackChunkName: 'Foo' */ /* webpackMode: 'eager' */\\"../../Foo\\"), _importCss(\\"Foo\\")]).then(proms => proms[0]);
 "
 `;
 
@@ -104,10 +104,10 @@ import(\\"./Foo\\")
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-var _importCss = _interopRequireDefault(require(\\"babel-plugin-dual-import/importCss.js\\")).default;
+var _importCss = _interopRequireDefault(require(\\"babel-plugin-dual-import-with-mode/importCss.js\\")).default;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-Promise.all([import( /* webpackChunkName: 'Foo' */\\"./Foo\\"), _importCss(\\"Foo\\")]).then(proms => proms[0]);
+Promise.all([import( /* webpackChunkName: 'Foo' */ /* webpackMode: 'eager' */\\"./Foo\\"), _importCss(\\"Foo\\")]).then(proms => proms[0]);
 "
 `;

@@ -1,17 +1,17 @@
 {
-  "name": "babel-plugin-dual-import",
+  "name": "babel-plugin-dual-import-with-mode",
   "version": "0.0.0-development",
   "description": "Babel plugin to import() both js + css",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/faceyspacey/babel-plugin-dual-import.git"
+    "url": "https://github.com/winjo/babel-plugin-dual-import-with-mode.git"
   },
   "bugs": {
-    "url": "https://github.com/faceyspacey/babel-plugin-dual-import/issues"
+    "url": "https://github.com/winjo/babel-plugin-dual-import-with-mode/issues"
   },
-  "homepage": "https://github.com/faceyspacey/babel-plugin-dual-import#readme",
-  "author": "James Gillmore james@faceyspacey.com>",
+  "homepage": "https://github.com/winjo/babel-plugin-dual-import-with-mode#readme",
+  "author": "winjo <winjoguo@gmail.com>",
   "license": "MIT",
   "scripts": {
     "test": "jest",
