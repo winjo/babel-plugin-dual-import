@@ -56,7 +56,9 @@ module.exports = function ({ types: t, template }) {
 
     delete argPath.node.leadingComments
     argPath.addComment('leading', ` webpackChunkName: '${chunkName}' `)
-    argPath.addComment('leading', ` webpackMode: '${mode}' `)
+    if (mode) {
+      argPath.addComment('leading', ` webpackMode: '${mode}' `)
+    }
 
     return loadTemplate({
       IMPORT: argPath.parent,
@@ -68,7 +70,7 @@ module.exports = function ({ types: t, template }) {
   return {
     name: 'dual-import-with-mode',
     visitor: {
-      Import(p, { opts }) {
+      Import(p, { opts = {} }) {
         if (p[visited]) return
         p[visited] = true
         p.parentPath.replaceWith(promiseAll(p, opts))

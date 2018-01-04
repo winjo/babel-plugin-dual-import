@@ -135,6 +135,7 @@ module.exports = {
           'render'
         ]
       }
-    ]
+    ],
+    'func-names': 0
   }
 }
